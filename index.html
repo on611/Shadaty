@@ -180,40 +180,6 @@
     <div class="particles" id="particles"></div>
     <div class="masjid-float">🕌</div>
 
-    <nav class="fixed top-0 w-full mobile-glass z-50 shadow-2xl border-b border-emerald-900/50 px-4 py-4">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-3 space-x-reverse">
-                <div
-                    class="w-12 h-12 bg-gradient-to-br from-gold-glow to-gold-dark rounded-2xl flex items-center justify-center shadow-xl relative">
-                    <i class="fas fa-mosque text-xl text-charcoal"></i>
-                    <div class="quran-light absolute inset-0 rounded-2xl animate-pulse"></div>
-                </div>
-                <span
-                    class="text-xl font-bold bg-gradient-to-r from-gold-glow to-deep-emerald bg-clip-text text-transparent relative">
-                    نور العلم
-                    <div class="quran-light w-20 h-20 absolute -top-4 -right-8"></div>
-                </span>
-            </div>
-            <button id="mobileMenuBtn" class="text-2xl text-gold-glow p-2 relative group">
-                <i class="fas fa-bars"></i>
-                <div
-                    class="quran-light w-12 h-12 absolute -top-2 -right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                </div>
-            </button>
-        </div>
-    </nav>
-
-    <div id="mobileMenu"
-        class="mobile-nav fixed right-0 top-0 h-full w-80 bg-gradient-to-b from-mobile-glass to-charcoal z-40 shadow-2xl p-8 pattern-bg">
-        <div class="flex justify-between items-center mb-12">
-            <span class="text-2xl font-bold text-gold-glow drop-shadow-lg">القائمة الرئيسية</span>
-            <button id="closeMobileMenu"
-                class="text-2xl text-gray-300 hover:text-gold-glow p-2 rounded-2xl hover:bg-gold-glow/20 transition-all">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        
-
     <section id="home"
         class="min-h-screen flex flex-col items-center justify-center pt-24 px-4 pb-20 text-center relative z-10">
         <div
@@ -305,7 +271,9 @@
                         class="cert-title font-bold text-gold-glow text-center mb-4 group-hover:text-deep-emerald transition-all leading-tight relative z-10">
                         بناء الامة✅♥️<br><span class="text-base"> </span>
                     </h3>
-                    <div class="text-lg font-bold text-deep-emerald text-center mb-3 relative z-10">اكادمية ميراث للوعى الاسلامى 🕌♥️</div>
+                    <div class="text-lg font-bold text-deep-emerald text-center mb-3 relative z-10">
+                        اكادمية ميراث للوعى الاسلامى 🕌♥️
+                    </div>
                     <div class="cert-date font-black text-gold-glow text-center drop-shadow-lg relative z-10 gold-glow">
                     </div>
                 </div>
@@ -324,7 +292,9 @@
                         class="cert-title font-bold text-gold-glow text-center mb-4 group-hover:text-deep-emerald transition-all relative z-10">
                         توازن نفسى😌♥️
                     </h3>
-                    <div class="text-lg font-bold text-deep-emerald text-center mb-3 relative z-10">اكادمية ميراث للوعى الاسلامى🕌♥️</div>
+                    <div class="text-lg font-bold text-deep-emerald text-center mb-3 relative z-10">
+                        اكادمية ميراث للوعى الاسلامى🕌♥️
+                    </div>
                     <div class="cert-date font-black text-gold-glow text-center drop-shadow-lg relative z-10 gold-glow">
                     </div>
                 </div>
@@ -343,7 +313,9 @@
                         class="cert-title font-bold text-gold-glow text-center mb-4 group-hover:text-deep-emerald transition-all relative z-10">
                         دورة النِعٓم😇♥️ 
                     </h3>
-                    <div class="text-lg font-bold text-deep-emerald text-center mb-3 relative z-10">اكادمية ميراث للوعى الاسلامى🕌♥️ </div>
+                    <div class="text-lg font-bold text-deep-emerald text-center mb-3 relative z-10">
+                        اكادمية ميراث للوعى الاسلامى🕌♥️
+                    </div>
                     <div class="cert-date font-black text-gold-glow text-center drop-shadow-lg relative z-10 gold-glow">
                     </div>
                 </div>
@@ -362,7 +334,9 @@
                         class="cert-title font-bold text-gold-glow text-center mb-4 group-hover:text-deep-emerald transition-all relative z-10">
                         قد سمع 💫♥️ 
                     </h3>
-                    <div class="text-lg font-bold text-deep-emerald text-center mb-3 relative z-10">اشراف وخريجة 🎓♥️ </div>
+                    <div class="text-lg font-bold text-deep-emerald text-center mb-3 relative z-10">
+                        اشراف وخريجة 🎓♥️
+                    </div>
                     <div class="cert-date font-black text-gold-glow text-center drop-shadow-lg relative z-10 gold-glow">
                     </div>
                 </div>
@@ -398,33 +372,12 @@
             }
         }
 
-        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.add('open');
-            document.body.style.overflow = 'hidden';
-        });
-
-        document.getElementById('closeMobileMenu').addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.remove('open');
-            document.body.style.overflow = 'auto';
-        });
-
-        document.querySelectorAll('a[href^=\"#\"]').forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(link.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                document.getElementById('mobileMenu').classList.remove('open');
-                document.body.style.overflow = 'auto';
-            });
-        });
-
         function openCert(img) {
             document.getElementById('certImg').src = img;
             document.getElementById('certModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
+
         function closeCert() {
             document.getElementById('certModal').classList.add('hidden');
             document.body.style.overflow = 'auto';
@@ -443,22 +396,6 @@
         window.addEventListener('load', () => {
             createParticles();
         });
-
-        document.getElementById('mobileMenu').addEventListener('click', e => {
-            if (e.target === document.getElementById('mobileMenu')) {
-                document.getElementById('mobileMenu').classList.remove('open');
-                document.body.style.overflow = 'auto';
-            }
-        });
-
-        window.addEventListener('scroll', () => {
-            const menu = document.getElementById('mobileMenu');
-            if (menu.classList.contains('open')) {
-                menu.classList.remove('open');
-                document.body.style.overflow = 'auto';
-            }
-        });
     </script>
 </body>
 </html>
-
